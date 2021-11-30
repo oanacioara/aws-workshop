@@ -57,6 +57,12 @@ This picture now looks like <br>
 * Google - Google Cloud
 
 ### Explore the AWS console
+AWS has multiple data centers in different regions of the world, and you can choose the one that best suites you. Sometimes that can mean the closest to you but you also need to consider the fact that not all services are available in all regions. The ones in which AWS guarantees to have full availability are **us-east-1** and **eu-west-1**. We will be using **Europe(Ireland) - eu-west-1**.
+
+In order to select your region go to the top right corner, next to your account name. <br>
+
+**_!!! You will have to select your region every time you log in._** <br>
+![img.png](imgs/region-select.png)
 ### Overview of the AWS services
 ### Create an AWS free account
 * Option 1 - [AWS Educate](https://aws.amazon.com/education/awseducate/)
@@ -64,7 +70,32 @@ This picture now looks like <br>
 ### AWS CLI
 Follow the installation [guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
-In order to use the CLI you need an access key ID and a secret access key. Follow the steps [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-prereqs.html) to create them. Make sure you download them at the end because you can only see them once.
+In order to use the CLI you need an access key ID and a secret access key. In order to do that follow the instructions:
+
+#### Create an Administrator User
+1. Go to AWS IAM (Identity Access Management) - this is where users and permissions are managed <br>
+![img_1.png](imgs/goto-iam.png)
+2. In the left navigation panel select **Users** and then clikc on **Add users** <br>
+![img.png](imgs/add-user-start.png)
+3. Set the username as **Administrator** and the rest of the settings like in the image bellow <br>
+![img.png](imgs/add-user-s1.png)
+4. Select **Add user to group**, then **Create group** and configure the new group as follows <br>
+![img.png](imgs/add-user-s2.png)
+5. No need to add any tags
+6. The review step should look like this
+![img.png](imgs/add-user-s4.png)
+7. Click **Create user**
+8. Download the `.csv`
+![img.png](imgs/add-user-s5.png)
+
+#### Create access key for user
+1. Go to IAM -> Users and click on **Administrator** 
+![img.png](imgs/create-access-key-start.png)
+2. Under **Security credentials** click on **Create access key**
+![img.png](imgs/create-access-key-1.png)
+3. Download the `.csv` file. **!!! This is the only time you can do this**
+![img.png](imgs/create-access-key-2.png)
+
 
 Once you have the credentials you need to configure the CLI so that it knows about them. Instructions [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html). We will be using the `eu-west-1` region.
 ### AWS SDK
