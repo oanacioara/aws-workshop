@@ -7,7 +7,7 @@
 * It would be useful to have some experience with bash scripting but not a must
 
 
-### Introduction
+### [Introduction](module-1/README.md)
 * What happens behind the scenes from the moment you type a DNS till you get the website rendered in your browser?
 * What is Cloud?
 * What are some Cloud providers?
@@ -17,17 +17,17 @@
 * AWS CLI
 * Create an AWS free account
 
-### Host a website on S3
+### [Host a website on S3](module-2/README.md)
 * Overview of S3: bucket, objects, access policy
 * Creating a bucket (console and CLI)
 * Configure a bucket for static website hosting (console and CLI)
 
-### Global content delivery with CloudFront
+### [Global content delivery with CloudFront](module-3/README.md)
 * Overview of CloudFront
 * Setup a CloudFront distribution for the S3 bucket
 * Setup a DNS for the website
 
-### Computing power with AWS Lambda
+### [Computing power with AWS Lambda](module-4/README.md)
 * Overview of AWS Lambda
 * Creating a Lambda (console & CLI)
 * Uploading code to Lambda (console & CLI)
