@@ -33,12 +33,12 @@
 * Uploading code to Lambda (console & CLI)
 * Execute Lambda (console & CLI)
 * Explore Lambda logs and metrics in CloudWatch
-* Configure application server for handling HTTP requests
+* Cleanup
 
-### Create an API with API Gateway
+### [Create an API with API Gateway](module-5/README.md)
 * Overview of API Gateway
 * Creating an API Gateway
-* Configure a route and link it to the Lambda
+* Configure a route and link it to a Lambda
 * Make an API call from website
 
 ### Can’t do anything without a database. AWS RDS and DynamoDB

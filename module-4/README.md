@@ -88,7 +88,6 @@ chmod +x scripts/invoke-lambda.sh
 ./scripts/invoke-lambda.sh <lambda-name>
 ```
 ### Explore Lambda logs and metrics in CloudWatch
-### Configure application server for handling HTTP requests
 
 ### Cleanup
 Each created lambda has some extra resources that get created together with it so when you delete a lambda you also need to delete these. These are the log group and the execution role. So, in order to clean up a lambda function you need to:
