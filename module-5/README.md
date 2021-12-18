@@ -53,3 +53,28 @@ You should see that a Lambda function with the name `blog-posts-GET` was created
 
 To make sure your API is working open a browser tab and call `<API_URL>/blogposts`. You should see the array of blog posts in the response.
 ### Make an API call from website
+Now that we have an API endpoint that returns a list of blog post we can update or website to call this endpoint and display the posts. In order to do that we will need to add some javascript to our website. For this we will create a new `index.js` file in which we will be making the HTTP request to API Gateway and then create the HTML elements to display the blog posts.
+
+You can find the code for the website under the `static-website` folder. You can test this on your local machine or upload it to the S3 bucket created in [module-2](../module-2).
+
+#### Handling CORS error
+You will notice that you get an error when making the request to API Gateway.
+![img.png](imgs/cors-error.png)
+This is because the domain names of your website (localhost / CloudFront DNS) and API (API Gateway DNS) do not match. As a security measure websites are not allowed to make HTPP requests to APIs that are not on the same domain. In order to allow such requests to be made the API needs to be configured to allow requests from other domains to be made.
+
+Go to API Gateway and from the **Actions** drop-down select **Enable CORS**.
+![img.png](imgs/api-gatway-enable-cors.png)
+
+Leave configurations as they are. For our purpose we will be allowing requests from any source.
+
+After configuring API Gateway we also need to do some changes to our Lambda so that it includes some headers in the response. These headers are the ones that tell the browser that the API is configured to accept requests from the website domain.
+
+Go to your Lambda and uncomment:
+```javascript
+ headers: {
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+    },
+```
+Now click **Deploy**.

@@ -1,0 +1,36 @@
+body {
+    background-color: #f4e1d2;
+    padding: 0 200px 0 200px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #50394c;
+    border-radius: 25px;
+    margin-bottom: 5rem;
+}
+.title {
+    color: #ffef96;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.article {
+    background-color: #b2b2b2;
+    border-radius: 25px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.article-title {
+    color: #50394c;
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.article-body {
+    font-size: 1.25rem;
+}
