@@ -41,7 +41,7 @@
 * Configure a route and link it to a Lambda
 * Make an API call from website
 
-### Can’t do anything without a database. AWS RDS and DynamoDB
+### [Can’t do anything without a database. AWS RDS and DynamoDB](module-6/README.md)
 * Overview of RDS
 * Overview of DynamoDB
 * Configure a DynamoDB
