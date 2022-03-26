@@ -15,9 +15,9 @@ echo "{
 }" > bucket_policy.json
 
 echo 'Setting bucket policy...'
-aws s3api put-bucket-policy --bucket $BUCKET_NAME --policy file://bucket_policy.json
+aws s3api put-bucket-policy --bucket $BUCKET_NAME --policy file://bucket_policy.json >/dev/null
 
 echo 'Configuring static website hosting...'
-aws s3 website s3://${BUCKET_NAME}/ --index-document index.html --error-document error.html
+aws s3 website s3://${BUCKET_NAME}/ --index-document index.html --error-document error.html >/dev/null
 
 rm bucket_policy.json

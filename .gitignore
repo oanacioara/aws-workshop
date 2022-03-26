@@ -1,3 +1,5 @@
 .idea
 creds
 .console
+creds-public
+.DS_Store
